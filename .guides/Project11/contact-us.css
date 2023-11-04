@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lexend:wght@300&family=Merriweather+Sans:wght@300&family=Roboto:ital,wght@1,300&display=swap");
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 6.5vw;
+}
+
+h3 {
+  font-family: "Merriweather Sans", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+hr {
+  background: hsla(32, 13%, 77%, 0.939);
+  color: hsla(32, 13%, 77%, 0.939);
+  height: 0.3rem;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  overflow-x: hidden;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  transition: all 0.4s ease-in;
+}
+
+.toggle-switch {
+  position: relative;
+  top: 5px;
+  right: justify;
+  display: grid;
+  width: 3.75rem;
+  height: 2.13rem;
+  margin-bottom: 0.63rem;
+  margin-inline: auto;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sliderbtn {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: all 0.4s ease-in;
+  border-radius: 2.13rem;
+}
+
+.sliderbtn:before {
+  position: absolute;
+  content: "";
+  height: 1.63rem;
+  width: 1.63rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .sliderbtn {
+  background-color: hsla(32, 65%, 46%, 0.939);
+}
+
+input:focus + .sliderbtn {
+  box-shadow: 0 0 8px hsla(32, 65%, 46%, 0.939);
+}
+
+input:checked + .sliderbtn:before {
+  transform: translateX(1.63rem);
+}
+
+header .intro img {
+  width: 100%;
+  height: auto;
+}
+
+header .intro {
+  position: relative;
+}
+
+header .intro .head {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+header .intro .head h1 {
+  color: hsla(32, 13%, 77%, 0.939);
+  padding-top: 40px;
+}
+
+header .intro .head h3 {
+  letter-spacing: 0.3rem;
+  font-family: "Dancing Script", sans-serif;
+  color: antiquewhite;
+}
+
+header .navbar .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  color: hsla(32, 65%, 46%, 0.939);
+  transition: width 0.3s;
+}
+
+header .navbar .navbar-nav .nav-link:hover:after {
+  width: 60%;
+  transition: width 0.3s;
+  color: hsla(32, 65%, 46%, 0.939);
+  border-bottom: 2px solid hsla(32, 65%, 46%, 0.939);
+}
+
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#form-submitted-msg {
+  margin-bottom: 3rem;
+  border-radius: 3px;
+  background-color: rgb(67, 161, 67);
+  padding: 0.5rem;
+  width: 40%;
+  text-align: center;
+  color: #fff;
+  display: none;
+}
+
+#exampleForm {
+  width: 40%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group:not(.radio):not(.checkbox) {
+  gap: 0.25rem;
+  flex-direction: column;
+}
+
+.input-group:not(.radio):not(.checkbox) input {
+  width: 100%;
+  border-radius: 0.375rem !important;
+}
+
+.input-group.checkbox {
+  gap: 1rem;
+}
+
+.input-group.radio {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.input-group.select select {
+  width: 100%;
+}
+
+legend {
+  font-size: 1rem;
+  width: max-content;
+}
+
+.form-btns {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.form-btns > button {
+  padding: 0.3rem 1.5rem;
+}
+
+.form-btns > .submit {
+  padding-inline: 3rem;
+}
+
+
+
+.error-msg {
+  display: none;
+}
